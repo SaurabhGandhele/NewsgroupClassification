@@ -1,4 +1,4 @@
-# NewgroupClassification
+# NewsgroupClassification
 
 Instructions for executing the NewsgroupClassification.r file
 
