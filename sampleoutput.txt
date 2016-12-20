@@ -1,0 +1,31 @@
+confusion.Matrix <- CrossTable(randomForest.predict, test.newsgroups, prop.chisq = FALSE, prop.t = FALSE, dnn = c('Predicted newsgroups','Actual newsgroups'))
+ 
+                       Actual
+Predictions              alt.atheism comp.graphics comp.sys.mac.hardware misc.forsale rec.motorcycles sci.crypt
+  alt.atheism                    202             1                     1            0               2         1
+  comp.graphics                    8           226                     7            6               3        13
+  comp.sys.mac.hardware            4            10                   226            0               0        13
+  misc.forsale                     2             6                     3          234               6         1
+  rec.motorcycles                  6             0                     8            0             213        12
+  sci.crypt                        1             2                     0            0               0       221
+  soc.religion.christian           3             0                     0            0               0         0
+  talk.politics.misc              19             6                     0            1               2        18
+                        Actual
+Predictions              soc.religion.christian talk.politics.misc
+  alt.atheism                                 5                  9
+  comp.graphics                               0                 16
+  comp.sys.mac.hardware                       0                  4
+  misc.forsale                                0                  4
+  rec.motorcycles                             0                 13
+  sci.crypt                                   0                  6
+  soc.religion.christian                    244                  0
+  talk.politics.misc                          1                210
+
+diagonal.elements <- sum(diag(confusion.Matrix$t))
+total.elements <- sum(confusion.Matrix$t)
+overall.accuracy <- diagonal.elements / total.elements * 100
+overall.accuracy
+
+[1] 88.84442
+
+ 
