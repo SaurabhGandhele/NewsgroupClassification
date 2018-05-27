@@ -1,8 +1,6 @@
 ## Authors
 
 ## Saurabh Gandhele (smg6512@rit.edu)
-## Surabhi Marathe  (srm6226@rit.edu)
-## Saurabh Wani     (saw4058@rit.edu)
 
 ## This program will read the source files and analyze the text to perform text mining on it 
 ## and classify the content text of the file in its appropriate newsgroups.
